@@ -330,3 +330,133 @@ print(mahasiswa2);
 
 Output:
 > [Output-Praktikum-5-Langkah-5-1](docs/outputP5L5-1.png)
+
+## Tugas Praktikum
+#### Soal 1: Silakan selesaikan Praktikum 1 sampai 5, lalu dokumentasikan berupa screenshot hasil pekerjaan Anda beserta penjelasannya!
+
+#### Soal 2:Jelaskan yang dimaksud Functions dalam bahasa Dart!
+
+**Jawab**
+>Functions di Dart adalah blok kode yang dapat dipanggil untuk melakukan tugas tertentu. Ini dapat membantu memecah program besar menjadi bagian-bagian kecil dan reusable. Sebuah function dapat menerima input, memprosesnya, dan mengembalikan hasil.
+
+#### Soal 3: Jelaskan jenis-jenis parameter di Functions beserta contoh sintaksnya!
+
+**Jawab:**
+> Dart memiliki beberapa jenis Parameter untuk Functions nya, diantaranya:
+  - **Positional Parameters**: Parameter yang diharuskan dan diberikan dalam urutan tertentu.
+  ```dart
+  void printNama(String nama, int umur) {
+    print('Nama: $nama, Umur: $umur');
+  }
+
+  printNama('Tryo', 20);  
+  // Output: Nama: Tryo, Umur: 20
+  ```
+
+  - **Optional Positional Parameters**: Parameter yang tidak wajib diisi dan diberi tanda kurung siku.
+  ```dart
+  void printNama(String nama, [int? umur]) {
+    print('Nama: $nama, Umur: ${umur ?? 'Tidak diketahui'}');
+  }
+
+  printNama('Tryo');  
+  // Output: Nama: Tryo, Umur: Tidak diketahui
+  ```
+
+  - **Named Parameters**: Parameter yang diberi nama, dapat diisi dalam urutan apa pun, dan diberi tanda kurung kurawal.
+  ```dart
+  void printNama({required String nama, int umur = 0}) {
+    print('Nama: $nama, Umur: $umur');
+  }
+
+  printNama(nama: 'Tryo', umur: 20);  
+  // Output: Nama: Tryo, Umur: 20
+  ```
+
+  - **Default Parameters**: Parameter yang memiliki nilai default jika tidak diberikan.
+  ```dart
+  void printNama({String nama = 'Anonim'}) {
+    print('Nama: $nama');
+  }
+
+  printNama();  
+  // Output: Nama: Anonim
+  ```
+
+#### Soal 4: Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
+
+**Jawab:**
+> Function sebagai first-class object memiliki arti bahwa sebuah fungsi dapat diperlakukan sebagai layaknya sebuah object atau nilai lainnya. Artinya function bisa disimpan dalam variabel, dikirim sebagai argumen, atau dikembalikan dari function lain.
+```dart
+void sayHelloTo(String nama) {
+  print('Hello $nama');
+}
+
+void main() {
+  var f = sayHelloTo;  // Function disimpan dalam variabel
+  f('Tryo');  // Output: Hello Tryo!
+}
+
+```
+
+#### Soal 5: Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
+
+**Jawab:**
+> Anonymous function adalah function tanpa nama yang biasanya digunakan sebagai argumen atau disimpan dalam variabel.
+
+```dart
+var tambah = (int a, int b) {
+  return a + b;
+};
+
+void main() {
+  print(tambah(3, 4));  // Output: 7
+}
+```
+
+#### Soal 6: Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
+
+**Jawab:**
+> - **Lexical Scope**: Ruang lingkup di mana variabel dapat diakses tergantung pada tempat deklarasi variabelnya.
+
+```dart
+void main() {
+  int x = 5;
+  void tampilkanX() {
+    print(x);  // Akses variabel x dari scope luar
+  }
+  tampilkanX();  // Output: 5
+}
+```
+
+> - **Lexical Closure**: Closure adalah function yang dapat "menangkap" dan mengingat variabel dari scope luar meskipun scope tersebut sudah tidak aktif.
+
+```dart
+Function tambahX(int x) {
+  return (int y) => x + y;  // Akses variabel x dari scope luar
+}
+
+void main() {
+  var tambah5 = tambahX(5);
+  print(tambah5(3));  // Output: 8
+}
+```
+
+#### Soal 7: Jelaskan dengan contoh cara membuat return multiple value di Functions!
+
+**Jawab:**
+> Untuk mengembalikan return multiple values tidak bisa dilakukan secara langsung, tetapi bisa menggunakan records atau tuples untuk mengembalikan lebih dari satu nilai.
+
+```dart
+(int, String) getNamaDanUmur() {
+  return (20, 'Tryo');
+}
+
+void main() {
+  var (umur, nama) = getNamaDanUmur();
+  print('Nama: $nama, Umur: $umur');  // Output: Nama: Tryo, Umur: 20
+}
+
+```
+
+#### Soal 8: Kumpulkan berupa link commit repo GitHub pada tautan yang telah disediakan di grup Telegram!
