@@ -11,6 +11,8 @@
 
 > <img src="docs/HasilPraktikum.png" alt="Output-Prak"/>
 
+> Hasil praktikum ini mendefinisikan sebuah widget Stateless bernama `RedTextWidget`, yang memanfaatkan plugin `auto_size_text` untuk menampilkan teks dengan ukuran font yang otomatis menyesuaikan jumlah karakter. Widget ini memiliki parameter wajib berupa teks (`text`). Teks tersebut ditampilkan dengan warna merah, ukuran font 14, dan dibatasi hingga maksimal dua baris. Jika teks terlalu panjang, akan dipangkas secara otomatis dan digantikan dengan elipsis (...) untuk memastikan tampilan tidak melebihi batas yang ditentukan. 
+
 ## Tugas Praktikum
 
 1. Selesaikan Praktikum tersebut, lalu dokumentasikan dan push ke repository Anda berupa screenshot hasil pekerjaan beserta penjelasannya di file README.md!
