@@ -75,3 +75,19 @@
 - Panggil method `handleError()` tersebut di `ElevatedButton`, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
     > - Pada langkah 1 (`returnError`) Fungsi ini hanya mensimulasikan sebuah operasi asinkron yang menghasilkan error. Setelah menunggu 2 detik menggunakan `Future.delayed`, fungsi ini langsung melemparkan `exception` dengan pesan `'Something terrible happened'`.
     > - Pada langkah 4 (`handleError`) Fungsi ini menangani error yang dilempar oleh `returnError` menggunakan `try-catch-finally`. Jika error terjadi, blok `catch` dipanggil untuk memperbarui UI (dengan mengatur nilai `result` ke pesan error). Blok `finally` memastikan bahwa pernyataan `print('Complete')` akan dijalankan, baik ada error maupun tidak.
+
+## Praktikum 6: Menggunakan Future dengan StatefulWidget
+
+### Soal 11
+
+Tambahkan nama panggilan Anda pada tiap properti `title` sebagai identitas pekerjaan Anda.
+
+> <img src="../../docs/soal-12.gif" alt="Output-Soal-12"/>
+
+### Soal 12
+
+> <img src="../../docs/soal-12.gif" alt="Output-Soal-12"/>
+
+- Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method `getPosition()` dengan kode `await Future.delayed(const Duration(seconds: 3));`
+- Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+    > Tidak, karena library `geolocator` tidak mendukung browser sepenuhnya sehingga tidak bisa berjalan di browser.
