@@ -49,3 +49,8 @@
 
 - Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
     > - **Langkah 2** hanya menangani keberhasilan tanpa memperhatikan kemungkinan error, sehingga tidak robust. **Langkah 5-6** menambahkan penanganan error dengan blok `try-catch` dan `.catchError`, sehingga lebih tangguh dan dapat memberikan umpan balik ke UI untuk kasus sukses maupun error.
+
+### Soal 7
+
+> <img src="../../docs/soal-7.gif" alt="Output-Soal-7"/>
+
