@@ -42,3 +42,10 @@
 
 - Jelaskan maksud kode langkah 2 tersebut!
     > - Pada langkah 2 menambahkan kode yang menggunakan `Completer` untuk mengontrol penyelesaian sebuah `Future` secara manual. Fungsi `getNumber()` mengembalikan sebuah `Future`, yang diselesaikan oleh fungsi `calculate()` setelah 5 detik dengan nilai `42`.
+
+### Soal 6
+
+> <img src="../../docs/soal-6.gif" alt="Output-Soal-6"/>
+
+- Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+    > - **Langkah 2** hanya menangani keberhasilan tanpa memperhatikan kemungkinan error, sehingga tidak robust. **Langkah 5-6** menambahkan penanganan error dengan blok `try-catch` dan `.catchError`, sehingga lebih tangguh dan dapat memberikan umpan balik ke UI untuk kasus sukses maupun error.
