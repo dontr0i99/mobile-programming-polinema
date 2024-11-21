@@ -50,6 +50,8 @@
 - Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
     > - **Langkah 2** hanya menangani keberhasilan tanpa memperhatikan kemungkinan error, sehingga tidak robust. **Langkah 5-6** menambahkan penanganan error dengan blok `try-catch` dan `.catchError`, sehingga lebih tangguh dan dapat memberikan umpan balik ke UI untuk kasus sukses maupun error.
 
+## Praktikum 4: Memanggil Future secara paralel
+
 ### Soal 7
 
 > <img src="../../docs/soal-7.gif" alt="Output-Soal-7"/>
@@ -59,3 +61,9 @@
 - Jelaskan maksud perbedaan kode langkah 1 dan 4!
     > - Langkah 1 (FutureGroup) Memberikan kontrol lebih besar atas `Future` yang ditambahkan, karena dapat menambahkan `Future` secara dinamis sebelum memanggil `close()`.
     > - Langkah 4 (Future.wait) Pendekatan yang lebih sederhana dan langsung untuk menjalankan kumpulan `Future` secara bersamaan.
+
+## Praktikum 5: Menangani Respon Error pada Async Code
+
+### Soal 9
+
+> <img src="../../docs/soal-9.gif" alt="Output-Soal-9"/>
