@@ -54,3 +54,8 @@
 
 > <img src="../../docs/soal-7.gif" alt="Output-Soal-7"/>
 
+### Soal 8
+
+- Jelaskan maksud perbedaan kode langkah 1 dan 4!
+    > - Langkah 1 (FutureGroup) Memberikan kontrol lebih besar atas `Future` yang ditambahkan, karena dapat menambahkan `Future` secara dinamis sebelum memanggil `close()`.
+    > - Langkah 4 (Future.wait) Pendekatan yang lebih sederhana dan langsung untuk menjalankan kumpulan `Future` secara bersamaan.
