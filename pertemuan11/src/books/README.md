@@ -16,3 +16,11 @@
 
 > <img src="../../docs/soal-2.png" alt="Output-Soal-2"/>
 
+### Soal 3
+
+> <img src="../../docs/soal-3.png" alt="Output-Soal-3"/>
+
+- Jelaskan maksud kode langkah 5 tersebut terkait `substring` dan `catchError`!
+    > - `Substring` berguna membatasi panjang string hingga 450 karakter pertama untuk mencegah data terlalu panjang.<br>
+    > - `CatchError` berguna menangkap error dari proses asinkron agar aplikasi tetap berjalan dengan memberikan pesan error yang sesuai.
+
