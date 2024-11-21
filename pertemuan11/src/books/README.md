@@ -24,6 +24,8 @@
     > - `Substring` berguna membatasi panjang string hingga 450 karakter pertama untuk mencegah data terlalu panjang.<br>
     > - `CatchError` berguna menangkap error dari proses asinkron agar aplikasi tetap berjalan dengan memberikan pesan error yang sesuai.
 
+## Praktikum 2: Menggunakan await/async untuk menghindari callbacks
+
 ### Soal 4
 
 > <img src="../../docs/soal-4.png" alt="Output-Soal-4"/>
@@ -31,3 +33,12 @@
 - Jelaskan maksud kode langkah 1 dan 2 tersebut!
     > - **Langkah 1** mendefinisikan fungsi asinkron untuk menghasilkan nilai integer setelah simulasi delay selama 3 detik.
     > - **Langkah 2** menghitung total secara berurutan dari ketiga fungsi asinkron, lalu memperbarui UI dengan hasil akhir.
+
+## Praktikum 3: Menggunakan Completer di Future
+
+### Soal 5
+
+> <img src="../../docs/soal-5.png" alt="Output-Soal-5"/>
+
+- Jelaskan maksud kode langkah 2 tersebut!
+    > - Pada langkah 2 menambahkan kode yang menggunakan `Completer` untuk mengontrol penyelesaian sebuah `Future` secara manual. Fungsi `getNumber()` mengembalikan sebuah `Future`, yang diselesaikan oleh fungsi `calculate()` setelah 5 detik dengan nilai `42`.
