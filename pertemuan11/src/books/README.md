@@ -67,3 +67,11 @@
 ### Soal 9
 
 > <img src="../../docs/soal-9.gif" alt="Output-Soal-9"/>
+
+### Soal 10
+
+> <img src="../../docs/soal-10.gif" alt="Output-Soal-10"/>
+
+- Panggil method `handleError()` tersebut di `ElevatedButton`, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
+    > - Pada langkah 1 (`returnError`) Fungsi ini hanya mensimulasikan sebuah operasi asinkron yang menghasilkan error. Setelah menunggu 2 detik menggunakan `Future.delayed`, fungsi ini langsung melemparkan `exception` dengan pesan `'Something terrible happened'`.
+    > - Pada langkah 4 (`handleError`) Fungsi ini menangani error yang dilempar oleh `returnError` menggunakan `try-catch-finally`. Jika error terjadi, blok `catch` dipanggil untuk memperbarui UI (dengan mengatur nilai `result` ke pesan error). Blok `finally` memastikan bahwa pernyataan `print('Complete')` akan dijalankan, baik ada error maupun tidak.
