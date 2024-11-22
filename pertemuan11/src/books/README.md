@@ -111,3 +111,17 @@ Hasil Pada Browser :
 - Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
     > - Tidak ada perbedaan UI dari langkah sebelumnya karena pada langkah ini hanya menambahkan error handling.
 
+## Praktikum 8: Navigation route dengan Future Function
+
+### Soal 15
+
+Tambahkan nama panggilan Anda pada tiap properti `title` sebagai identitas pekerjaan Anda.
+> <img src="../../docs/soal-16.gif" alt="Output-Soal-16"/>
+
+### Soal 16
+
+> <img src="../../docs/soal-16.gif" alt="Output-Soal-16"/>
+
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+    > - Yang terjadi adalah ketika `button` di tekan maka akan menuju page `Navigation Second Screen`, kemudian ketika di tekan dari salah satu `button` yang ada maka `backgroundColor` akan berganti warna sesuai `buttton` yang di tekan.
+- Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
