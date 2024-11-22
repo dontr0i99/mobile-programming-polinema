@@ -95,3 +95,12 @@ Tambahkan nama panggilan Anda pada tiap properti `title` sebagai identitas peker
 Hasil Pada Browser :
 > <img src="../../docs/soal-12-chrome.gif" alt="Output-Soal-12-chrome"/>
 
+## Praktikum 7: Manajemen Future dengan FutureBuilder
+
+### Soal 13
+
+> <img src="../../docs/soal-13.gif" alt="Output-Soal-13"/>
+
+- Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+    > - Tidak ada perbedaan UI dari praktikum sebelumnya karena paad praktikum ini hanya mengganti menggunakan `FutureBuilder`.
+
