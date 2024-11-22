@@ -125,3 +125,59 @@ Tambahkan nama panggilan Anda pada tiap properti `title` sebagai identitas peker
 - Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
     > - Yang terjadi adalah ketika `button` di tekan maka akan menuju page `Navigation Second Screen`, kemudian ketika di tekan dari salah satu `button` yang ada maka `backgroundColor` akan berganti warna sesuai `buttton` yang di tekan.
 - Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+    ```dart
+    ElevatedButton(
+        child: const Text('Brown'),
+        onPressed: () {
+        color = Colors.brown;
+        Navigator.pop(context, color);
+        },
+    ),
+    ElevatedButton(
+        child: const Text('Cyan'),
+        onPressed: () {
+        color = Colors.cyan;
+        Navigator.pop(context, color);
+        },
+    ),
+    ElevatedButton(
+        child: const Text('Purple'),
+        onPressed: () {
+        color = Colors.deepPurple;
+        Navigator.pop(context, color);
+        },
+    ),
+    ```
+
+## Praktikum 9: Memanfaatkan async/await dengan Widget Dialog
+
+### Soal 17
+
+> <img src="../../docs/soal-17.gif" alt="Output-Soal-17"/>
+
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+    > - Yang terjadi adalah ketika `button` `change color` di tekan maka akan muncul `alertDialog`, pada `alertDialog` terdapat 3 `button` warna yang dapat ditekan, jika dtekan salah satunya maka `backgroundColor` akan berganti sesuai warna yg dipilih pada `button` di `alertDialog`.
+- Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+    ```dart
+    TextButton(
+    child: const Text('Brown'),
+    onPressed: () {
+        color = Colors.brown;
+        Navigator.pop(context, color);
+    },
+    ),
+    TextButton(
+    child: const Text('Cyan'),
+    onPressed: () {
+        color = Colors.cyan;
+        Navigator.pop(context, color);
+    },
+    ),
+    TextButton(
+    child: const Text('Green'),
+    onPressed: () {
+        color = const Color.fromARGB(255, 158, 231, 41);
+        Navigator.pop(context, color);
+    },
+    )
+    ```
