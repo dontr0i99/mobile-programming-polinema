@@ -102,5 +102,12 @@ Hasil Pada Browser :
 > <img src="../../docs/soal-13.gif" alt="Output-Soal-13"/>
 
 - Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
-    > - Tidak ada perbedaan UI dari praktikum sebelumnya karena paad praktikum ini hanya mengganti menggunakan `FutureBuilder`.
+    > - Tidak ada perbedaan UI dari praktikum sebelumnya karena pada praktikum ini hanya mengganti menggunakan `FutureBuilder`.
+
+### Soal 14
+
+> <img src="../../docs/soal-14.gif" alt="Output-Soal-14"/>
+
+- Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+    > - Tidak ada perbedaan UI dari langkah sebelumnya karena pada langkah ini hanya menambahkan error handling.
 
