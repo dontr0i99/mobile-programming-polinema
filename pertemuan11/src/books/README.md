@@ -90,4 +90,8 @@ Tambahkan nama panggilan Anda pada tiap properti `title` sebagai identitas peker
 
 - Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method `getPosition()` dengan kode `await Future.delayed(const Duration(seconds: 3));`
 - Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
-    > Tidak, karena library `geolocator` tidak mendukung browser sepenuhnya sehingga tidak bisa berjalan di browser.
+    > Ya, Pada hasil yang saya jalankan di browser bisa menghasilkan koordinat GPS karena pada laptop yang saya gunakan terdapat GPS untuk dijalankan pada browser 
+
+Hasil Pada Browser :
+> <img src="../../docs/soal-12-chrome.gif" alt="Output-Soal-12-chrome"/>
+
