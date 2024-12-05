@@ -15,3 +15,20 @@
 ### Soal 2
 
 > <img src="docs/soal-2.png" alt="Output-Soal-2"/>
+
+### Soal 3
+
+```dart
+yield* Stream.periodic(
+      const Duration(seconds: 1), (int t) {
+        int index = t % colors.length;
+        return colors[index];
+    });
+```
+
+- Jelaskan fungsi keyword yield* pada kode tersebut!
+    > - Keyword `yield*` Digunakan untuk menghasilkan semua elemen dari stream atau iterable lain. Dalam kasus ini, `yield*` mengalirkan elemen yang dihasilkan oleh `Stream.periodic`.
+- Apa maksud isi perintah kode tersebut?
+    > - `Stream.periodic` menghasilkan elemen secara periodik setiap 1 detik.<br>
+    > - Fungsi `(int t)` menghitung indeks warna dengan `t % colors.length` sehingga warna dari daftar `colors` dipilih secara bergantian.<br>
+    > - Hasilnya adalah stream yang memancarkan warna dari `colors` secara berulang setiap detik.
