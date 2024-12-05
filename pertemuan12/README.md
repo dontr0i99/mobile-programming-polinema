@@ -32,3 +32,7 @@ yield* Stream.periodic(
     > - `Stream.periodic` menghasilkan elemen secara periodik setiap 1 detik.<br>
     > - Fungsi `(int t)` menghitung indeks warna dengan `t % colors.length` sehingga warna dari daftar `colors` dipilih secara bergantian.<br>
     > - Hasilnya adalah stream yang memancarkan warna dari `colors` secara berulang setiap detik.
+
+### Soal 4
+
+> <img src="docs/soal-4.gif" alt="Output-Soal-4"/>
