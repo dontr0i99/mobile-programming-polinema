@@ -41,7 +41,7 @@ yield* Stream.periodic(
 
 > <img src="docs/soal-5.gif" alt="Output-Soal-5"/>
 
-- Jelaskan perbedaan menggunakan `listen` dan `await for` !
+- Jelaskan perbedaan menggunakan `listen` dan `await for` (langkah 9) !
     > - `listen` digunakan untuk mendengarkan stream secara asinkron dengan callback yang dipanggil setiap kali data baru diterima. Penggunaan `listen` tidak memblokir eksekusi kode setelahnya, memungkinkan aplikasi untuk terus berjalan. Ini sangat cocok untuk menangani stream yang bersifat broadcast atau ketika berbagai event perlu diproses secara reaktif, seperti data baru, error, atau selesai.<br>
 
     > - `await for` digunakan untuk secara berurutan mengambil data dari stream dalam bentuk loop asinkron. Penggunaan `await for` akan memblokir eksekusi kode di dalam scope hingga stream selesai, dan cocok digunakan untuk stream yang hanya memiliki satu subscriber. Struktur ini memungkinkan pemrosesan data dalam urutan yang diterima secara linier.
@@ -54,3 +54,10 @@ yield* Stream.periodic(
 
 - Jelaskan maksud kode langkah 8 dan 10 tersebut!
     > - Fungsi `addRandomNumber()` menghasilkan angka acak antara 0-9 dan mengirimkannya ke stream `numberStream` menggunakan `addNumberToSink()`. Di dalam `initState()`, objek `numberStream` diinisialisasi dan stream yang ada pada `numberStreamController` didengarkan. Setiap kali ada data baru, nilai `lastNumber` diperbarui dengan memanggil `setState()` agar tampilan UI diperbarui. Pada metode `dispose()`, `numberStreamController` ditutup untuk mencegah kebocoran memori ketika widget dihapus.
+
+### Soal 7
+
+> <img src="docs/soal-7.gif" alt="Output-Soal-7"/>
+
+- Jelaskan maksud kode langkah 13 sampai 15 tersebut!
+    > - Fungsi `addError()` menambahkan error ke stream, yang kemudian ditangani oleh `stream.listen()`. Ketika terjadi error, callback `.onError()` akan mengubah nilai `lastNumber` menjadi `-1`. Panggilan `numberStream.addError()` memicu error dalam stream yang ditangani oleh listener.
