@@ -105,3 +105,11 @@ yield* Stream.periodic(
 - Jelaskan maksud kode pada langkah 3 dan 7 !
     > - Kode tersebut membuat stream yang menghasilkan angka acak setiap detik menggunakan `Stream.periodic()`, yang kemudian ditangani oleh `StreamBuilder`. Di dalam `StreamBuilder`, stream dari numberStream dihubungkan untuk menampilkan nilai yang diterima pada UI. `initialData: 0` digunakan untuk menampilkan nilai awal 0 saat stream pertama kali dibangun. Jika stream memiliki data, angka yang diterima akan ditampilkan di layar. Jika terjadi error, akan mencetak 'Error!', dan jika tidak ada data, tidak ada tampilan yang ditampilkan. Dengan demikian, aplikasi ini memperbarui dan menampilkan angka acak setiap detik.
 
+## Praktikum 7: BLoC Pattern
+
+### Soal 13
+
+> <img src="docs/soal-13.gif" alt="Output-Soal-13"/><br>
+
+- Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ?
+    > - Praktikum ini menunjukkan penerapan pola *BLoC (Business Logic Component)* dalam aplikasi Flutter untuk memisahkan logika bisnis dari antarmuka pengguna. Pada praktikum ini, `RandomNumberBloc` berfungsi untuk menangani logika bisnis dengan menghasilkan angka acak menggunakan `StreamController`. Di dalam `RandomNumberBloc`, event diterima melalui `StreamController<void>` yang memicu penghasilan angka acak, sementara angka yang dihasilkan dikirimkan melalui `StreamController<int>` ke stream `randomNumber`. Pada bagian antarmuka, `StreamBuilder` digunakan untuk mendengarkan stream `randomNumber` dan memperbarui tampilan setiap kali angka acak baru diterima. Floating action button pada UI berfungsi untuk memicu event pada BLoC, yang kemudian menghasilkan angka acak baru. Konsep BLoC dalam praktikum ini terlihat jelas dalam pemisahan logika pengolahan angka acak dan tampilan, di mana BLoC bertanggung jawab penuh atas pengelolaan data dan aliran event, sementara UI hanya menangani pembaruan tampilan berdasarkan data yang diterima dari stream.
