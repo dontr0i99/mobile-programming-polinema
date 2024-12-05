@@ -79,3 +79,20 @@ yield* Stream.periodic(
 
 - Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
     > - Kode tersebut mendengarkan stream untuk memperbarui nilai `lastNumber` setiap kali data baru diterima. Jika terjadi error, nilai `lastNumber` diubah menjadi `-1`, dan ketika stream selesai, mencetak pesan 'onDone was called'. Pada metode `dispose()`, langganan stream dibatalkan dengan `subscription.cancel()` untuk mencegah kebocoran memori. Fungsi `addRandomNumber()` menghasilkan angka acak dan menambahkannya ke stream jika stream masih terbuka. Jika stream sudah ditutup, nilai `lastNumber` akan diubah menjadi `-1`.
+
+## Praktikum 5: Multiple stream subscriptions
+
+### Soal 10
+
+> <img src="docs/soal-10.png" alt="Output-Soal-10"/><br>
+
+- Jelaskan mengapa error itu bisa terjadi ?
+    > - Error `StateError (Bad state: Stream has already been listened to.)` muncul karena stream yang digunakan adalah stream *single-subscription*, yang hanya dapat memiliki satu listener. Dalam kode tersebut, stream yang sama didengarkan dua kali, yaitu dengan `subscription` dan `subscription2`, yang menyebabkan error.
+
+### Soal 11
+
+> <img src="docs/soal-11.gif" alt="Output-Soal-11"/><br>
+
+- Jelaskan mengapa hal itu bisa terjadi ?
+    > - Hal itu terjadi karena stream diubah menjadi broadcast stream menggunakan `asBroadcastStream()`, yang memungkinkan stream didengarkan lebih dari satu kali. Ketika tombol "New Random Number" ditekan, stream mengirimkan nilai yang diterima oleh dua listener (`subscription` dan `subscription2`), sehingga setiap angka yang ditambahkan ke stream akan diproses dua kali. Akibatnya, teks yang ditampilkan bertambah dua kali setiap kali tombol ditekan.
+
