@@ -96,3 +96,12 @@ yield* Stream.periodic(
 - Jelaskan mengapa hal itu bisa terjadi ?
     > - Hal itu terjadi karena stream diubah menjadi broadcast stream menggunakan `asBroadcastStream()`, yang memungkinkan stream didengarkan lebih dari satu kali. Ketika tombol "New Random Number" ditekan, stream mengirimkan nilai yang diterima oleh dua listener (`subscription` dan `subscription2`), sehingga setiap angka yang ditambahkan ke stream akan diproses dua kali. Akibatnya, teks yang ditampilkan bertambah dua kali setiap kali tombol ditekan.
 
+## Praktikum 6: StreamBuilder
+
+### Soal 12
+
+> <img src="docs/soal-12.gif" alt="Output-Soal-12"/><br>
+
+- Jelaskan maksud kode pada langkah 3 dan 7 !
+    > - Kode tersebut membuat stream yang menghasilkan angka acak setiap detik menggunakan `Stream.periodic()`, yang kemudian ditangani oleh `StreamBuilder`. Di dalam `StreamBuilder`, stream dari numberStream dihubungkan untuk menampilkan nilai yang diterima pada UI. `initialData: 0` digunakan untuk menampilkan nilai awal 0 saat stream pertama kali dibangun. Jika stream memiliki data, angka yang diterima akan ditampilkan di layar. Jika terjadi error, akan mencetak 'Error!', dan jika tidak ada data, tidak ada tampilan yang ditampilkan. Dengan demikian, aplikasi ini memperbarui dan menampilkan angka acak setiap detik.
+
