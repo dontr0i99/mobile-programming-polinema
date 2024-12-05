@@ -11,3 +11,7 @@
 ### Soal 1
 
 > <img src="docs/soal-1.png" alt="Output-Soal-1"/>
+
+### Soal 2
+
+> <img src="docs/soal-2.png" alt="Output-Soal-2"/>
