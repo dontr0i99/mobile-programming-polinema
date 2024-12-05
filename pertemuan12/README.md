@@ -36,3 +36,12 @@ yield* Stream.periodic(
 ### Soal 4
 
 > <img src="docs/soal-4.gif" alt="Output-Soal-4"/>
+
+### Soal 5
+
+> <img src="docs/soal-5.gif" alt="Output-Soal-5"/>
+
+- Jelaskan perbedaan menggunakan `listen` dan `await for` !
+    > - listen digunakan untuk mendengarkan stream secara asinkron dengan callback yang dipanggil setiap kali data baru diterima. Penggunaan listen tidak memblokir eksekusi kode setelahnya, memungkinkan aplikasi untuk terus berjalan. Ini sangat cocok untuk menangani stream yang bersifat broadcast atau ketika berbagai event perlu diproses secara reaktif, seperti data baru, error, atau selesai.<br>
+
+    > - await for digunakan untuk secara berurutan mengambil data dari stream dalam bentuk loop asinkron. Penggunaan await for akan memblokir eksekusi kode di dalam scope hingga stream selesai, dan cocok digunakan untuk stream yang hanya memiliki satu subscriber. Struktur ini memungkinkan pemrosesan data dalam urutan yang diterima secara linier.
