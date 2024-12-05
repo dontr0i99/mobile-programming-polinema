@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'stream.dart';
+import 'dart:async';
+import 'dart:math';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +30,9 @@ class StreamHomePage extends StatefulWidget {
 class _StreamHomePageState extends State<StreamHomePage> {
   Color bgColor = Colors.lightGreen;
   late ColorStream colorStream;
+  int lastNumber = 0;
+  late StreamController numberStreamController;
+  late NumberStream numberStream;
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +40,23 @@ class _StreamHomePageState extends State<StreamHomePage> {
       appBar: AppBar(
         title: const Text('Stream - Tryo'),
       ),
-      body: Container(
-        decoration: BoxDecoration(color: bgColor),
+      body: SizedBox(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(lastNumber.toString()),
+            ElevatedButton(
+              onPressed: () => addRandomNumber(),
+              child: Text('New Random Number'),
+            ),
+          ],
+        ),
       ),
+      // body: Container(
+      //   decoration: BoxDecoration(color: bgColor),
+      // ),
     );
   }
 
@@ -54,11 +73,31 @@ class _StreamHomePageState extends State<StreamHomePage> {
     // }
   }
 
+  void addRandomNumber() {
+    Random random = Random();
+    int myNum = random.nextInt(10);
+    numberStream.addNumberToSink(myNum);
+  }
+
   @override
   void initState() {
+    numberStream = NumberStream();
+    numberStreamController = numberStream.controller;
+    Stream stream = numberStreamController.stream;
+    stream.listen((event) {
+      setState(() {
+        lastNumber = event;
+      });
+    });
     super.initState();
-    colorStream = ColorStream();
-    changeColor();
+    // colorStream = ColorStream();
+    // changeColor();
     
+  }
+
+  @override
+  void dispose() {
+    numberStreamController.close();
+    super.dispose();
   }
 }
