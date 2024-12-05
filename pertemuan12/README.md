@@ -61,3 +61,12 @@ yield* Stream.periodic(
 
 - Jelaskan maksud kode langkah 13 sampai 15 tersebut!
     > - Fungsi `addError()` menambahkan error ke stream, yang kemudian ditangani oleh `stream.listen()`. Ketika terjadi error, callback `.onError()` akan mengubah nilai `lastNumber` menjadi `-1`. Panggilan `numberStream.addError()` memicu error dalam stream yang ditangani oleh listener.
+
+## Praktikum 3: Injeksi data ke streams
+
+### Soal 8
+
+> <img src="docs/soal-8.gif" alt="Output-Soal-8"/>
+
+- Jelaskan maksud kode langkah 1-3 tersebut!
+    > - Kode tersebut membuat `StreamTransformer` untuk memodifikasi data yang diterima dari stream. Setiap nilai yang diterima akan dikalikan dengan 10, sedangkan error akan menghasilkan nilai `-1`. Transformer diterapkan pada stream, dan hasilnya didengarkan untuk memperbarui `lastNumber`. Jika terjadi error, `lastNumber` akan diubah menjadi `-1`.

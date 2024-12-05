@@ -26,9 +26,9 @@ class NumberStream {
     controller.sink.add(newNumber);
   }
 
-  addError() {
-    controller.sink.addError('Error');
-  }
+  // addError() {
+  //   controller.sink.addError('Error');
+  // }
 
   close() {
     controller.close();
